@@ -1,5 +1,7 @@
 FROM fujiwarakoubou/centos7-openjdk8jre:latest
 
+RUN yum -y install apt-get
+
 ENV CATALINA_HOME /usr/local/tomcat
 ENV PATH $CATALINA_HOME/bin:$PATH
 RUN mkdir -p "$CATALINA_HOME"
