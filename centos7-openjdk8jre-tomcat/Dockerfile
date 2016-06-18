@@ -8,3 +8,4 @@ RUN yum -y install tomcat && yum clean all
 
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
+

@@ -5,4 +5,3 @@ RUN yum -y update && yum clean all
 
 # Install Ruby
 RUN yum -y install ruby && yum clean all
-
