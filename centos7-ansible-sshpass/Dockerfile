@@ -1,4 +1,4 @@
-FROM ansible:centos7-ansible
+FROM ansible/centos7-ansible
 
 # bug fix of centos7-ansible
 RUN echo -e '[local]\nlocalhost\n' > /etc/ansible/hosts
