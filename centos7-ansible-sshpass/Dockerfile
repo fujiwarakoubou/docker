@@ -7,3 +7,5 @@ RUN echo -e '[local]\nlocalhost\n' > /etc/ansible/hosts
 RUN yum -y install sshpass
 
 ENV ANSIBLE_HOST_KEY_CHECKING false
+
+WORKDIR /root
