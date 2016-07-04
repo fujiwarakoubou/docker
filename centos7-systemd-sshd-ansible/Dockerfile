@@ -17,7 +17,7 @@ ENV PYTHONPATH /opt/ansible/ansible/lib
 ENV ANSIBLE_LIBRARY /opt/ansible/ansible/library
 
 # for ansible-playbook
-RUN yum -y install sshpass
+RUN yum -y install sshpass python-passlib
 
 WORKDIR /root
 
