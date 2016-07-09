@@ -1,6 +1,4 @@
-FROM fujiwarakoubou/centos7-systemd
-
-RUN yum -y install openssh-server; yum clean all; systemctl enable sshd.service
+FROM fujiwarakoubou/centos7-systemd-sshd
 
 # official ansible dockerfile
 RUN yum clean all && \
@@ -16,7 +14,7 @@ ENV PATH /opt/ansible/ansible/bin:/bin:/usr/bin:/sbin:/usr/sbin
 ENV PYTHONPATH /opt/ansible/ansible/lib
 ENV ANSIBLE_LIBRARY /opt/ansible/ansible/library
 
-# bug fix of centos7-ansible
+# bug fix of official ansible
 RUN echo -e '[local]\nlocalhost\n' > /etc/ansible/hosts
 
 # for ansible-playbook
